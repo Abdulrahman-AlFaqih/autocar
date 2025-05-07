@@ -491,6 +491,8 @@ opacity: 0;
 
 .vision.section{
   background-image: url(../img/pexels-kindelmedia-9800031.jpg);
+	  background-position: bottom !important;
+
 
 }
 /* From Uiverse.io by Praashoo7 */ 
