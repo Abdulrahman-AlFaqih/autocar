@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sci-Fi Border Box</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .sci-fi-box {
+      position: relative;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 2rem 3rem;
+      border: 2px solid #00bfff;
+      box-shadow: 0 0 20px #00bfff;
+      width: 90%;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .sci-fi-box::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px solid #00bfff;
+      pointer-events: none;
+      z-index: -1;
+      box-shadow: 0 0 25px #00bfff;
+      clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+    }
+
+    .sci-fi-box::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+        to right,
+        #00bfff,
+        #00bfff 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cert {
+      margin: 0.5rem 0;
+    }
+
+    .year {
+      color: #00bfff;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sci-fi-box">
+    <h2><span style="color: white;">Cert</span><span style="color: #00bfff;">ifi</span><span style="color: white;">cates</span></h2>
+    <div class="cert"><span class="year">2023</span>Google Certified Professional Cloud Architect</div>
+    <div class="cert"><span class="year">2022</span>AWS Certified Solutions Architect</div>
+    <div class="cert"><span class="year">2021</span>Certified Information Security Manager (CISM)</div>
+    <div class="cert"><span class="year">2019</span>Project Management Professional (PMP)</div>
+    <div class="cert"><span class="year">2018</span>Google IT Support</div>
+  </div>
+
+</body>
+</html>
