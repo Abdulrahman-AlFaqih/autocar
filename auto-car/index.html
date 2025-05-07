@@ -9,7 +9,30 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
+   #loader {
+      position: fixed;
+      z-index: 9999;
+      width: 100vw;
+      height: 100vh;
+      background: #818181;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 550px) {
+      .about-img .truck{
+        width: calc(var(--width) * 1.5px);
+        height: calc(var(--width) * 0.5px);
+      }
+      .about-img .truck .truck-wheel{
+        width: calc(var(--width) * 0.22px) ;
+        height: calc(var(--width) * 0.22px) ;
+      }
+      
+    }
    /* Nav-bar */
 .nav{
   overflow: hidden;
@@ -108,6 +131,75 @@
 </head>
 <body>
 
+<div class="section" id="loader">
+  <!-- From Uiverse.io by vikas7754 --> 
+  <div class="truck">
+    <div class="truck__body">
+      <div class="truck__body truck__body--top">
+        <div class="truck__window">
+          <div class="truck__window-glass"></div>
+        </div>
+      </div>
+      <div class="truck__body truck__body--mid">
+        <div class="truck__mid-body"></div>
+      </div>
+      <div class="truck__body truck__body--bottom">
+        <div class="truck__underpanel"></div>
+        <div class="truck__rear-bumper"></div>
+        <div class="truck__side-skirt"></div>
+      </div>
+    </div>
+    <div class="truck__wheel truck__wheel--front">
+      <div class="truck__wheel-arch"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+      <div class="truck-wheel">
+        <div class="truck-wheel__rim">
+          <div style="--index: 0;" class="truck-wheel__spoke"></div>
+          <div style="--index: 1;" class="truck-wheel__spoke"></div>
+          <div style="--index: 2;" class="truck-wheel__spoke"></div>
+          <div style="--index: 3;" class="truck-wheel__spoke"></div>
+          <div style="--index: 4;" class="truck-wheel__spoke"></div>
+          <div style="--index: 5;" class="truck-wheel__spoke"></div>
+          <div style="--index: 6;" class="truck-wheel__spoke"></div>
+        </div>
+      </div>
+    </div>
+    <div class="truck__wheel truck__wheel--rear">
+      <div class="truck__wheel-arch"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+      <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+      <div class="truck-wheel">
+        <div class="truck-wheel__rim">
+          <div style="--index: 0;" class="truck-wheel__spoke"></div>
+          <div style="--index: 1;" class="truck-wheel__spoke"></div>
+          <div style="--index: 2;" class="truck-wheel__spoke"></div>
+          <div style="--index: 3;" class="truck-wheel__spoke"></div>
+          <div style="--index: 4;" class="truck-wheel__spoke"></div>
+          <div style="--index: 5;" class="truck-wheel__spoke"></div>
+          <div style="--index: 6;" class="truck-wheel__spoke"></div>
+        </div>
+      </div>
+    </div>
+    <div class="truck__headlight"></div>
+    <div class="truck__taillight"></div>
+    <div class="truck__indicator"></div>
+    <div class="truck__foglight"></div>
+  </div>
+
+</div>
+
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    loader.style.opacity = 0;
+    setTimeout(() => loader.style.display = "none", 10000); // optional fade-out
+  });
+</script>
+
+
    <!--Navbar -->
    <input type="checkbox" id="check">
    <label for="check" class="checkbtn "><i class="fa fa-bars"></i></label>
@@ -117,14 +209,14 @@
           <!-- CSS ONLY -->
           <a href="#" class="btn-wrapper active">
             <div class="btn-tail"></div>
-            <div class="btn-body">
+            <div class="btn-body" id="home">
               <p class="">Home</p>
             </div>
           </a>
   
           <a href="#" class="btn-wrapper">
             <div class="btn-tail"></div>
-            <div class="btn-body" id="about-us">
+            <div class="btn-body" id="about">
               <p>About</p>
             </div>
           </a>
@@ -138,35 +230,28 @@
   
           <a href="#" class="btn-wrapper">
             <div class="btn-tail"></div>
-            <div class="btn-body" id="services">
+            <div class="btn-body" id="mission">
               <p>Mission</p>
             </div>
           </a>
 
           <a href="#" class="btn-wrapper">
            <div class="btn-tail"></div>
-           <div class="btn-body" id="products">
+           <div class="btn-body" id="services">
              <p>Services</p>
            </div>
          </a>
 
          <a href="#" class="btn-wrapper">
            <div class="btn-tail"></div>
-           <div class="btn-body" id="second-projects">
-             <p>Projects</p>
-           </div>
-         </a>
-
-         <a href="#" class="btn-wrapper">
-           <div class="btn-tail"></div>
-           <div class="btn-body" id="books">
+           <div class="btn-body" id="products">
              <p>Products</p>
            </div>
          </a>
 
          <a href="#" class="btn-wrapper">
            <div class="btn-tail"></div>
-           <div class="btn-body" id="faq">
+           <div class="btn-body" id="footer">
              <p>Contact-us</p>
            </div>
          </a>
@@ -175,22 +260,22 @@
    </div>
 
 
-  <div class="hero section">
+  <div class="hero home section" id="home">
     <div class="overlay"></div>
     <div class="content">
-      <div class="logo">
-        <img src="assets/img/alraebsi.png" alt="Al-Raebi Logo"> <!-- Replace with your logo if needed -->
+      <div class="logo" >
+        <img src="assets/img/alraebsi.png"  alt="Al-Raebi Logo"> <!-- Replace with your logo if needed -->
       </div>
       
       <div class="slider-container">
         <div class="slides">
           <div class="slide">
-            <h2>Future is Electric</h2>
-            <p>Experience the next evolution of driving with electric vehicles designed for efficiency and power.</p>
+            <h2>AlRaebi Auto Cars</h2>
+            <p>A leading company with the aim of creating a qualitative leap in the automotive sector in the Middle East</p>
           </div>
           <div class="slide">
-            <h2>Clean. Fast. Silent.</h2>
-            <p>Go green without compromise. High-performance, zero-emission transport for the modern era.</p>
+            <h2>Future is Electric</h2>
+            <p>Experience the next evolution of driving with electric vehicles designed for efficiency and power.</p>
           </div>
           <div class="slide">
             <h2>Drive the Change</h2>
@@ -202,12 +287,13 @@
     </div>
   </div>
 
-  <section class="about section">
+  <section class="about section" id="about">
     <div class="container-fluid">
+      <h2 class="section-title text-center" data-aos="zoom-in-up">About Us</h2>
       <div class="section-content">
         <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="sci-fi-frame">
+          <div class="col-lg-6 col-sm-12">
+            <div class="sci-fi-frame" data-aos="fade-down-right" data-aos-duration="800" data-aos-delay="200">
               <h2>Who We Are</h2>
               <p>
                 AlRaebi Auto Car is a leading company established with the aim of creating
@@ -216,10 +302,63 @@
               </p>       
             </div>
           </div>  <!--col end -->
-          <div class="col-md-6 col-sm-12">
-            <div style="max-width: 1000px;overflow: hidden;">
-              <img src="assets/img/ev-car2.png" alt="" class="img-fluid w-100" srcset="" >
-            </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="about-img" data-aos="fade-down-left" data-aos-duration="800" data-aos-delay="200">
+              <div class="truck">
+                <div class="truck__body">
+                  <div class="truck__body truck__body--top">
+                    <div class="truck__window">
+                      <div class="truck__window-glass"></div>
+                    </div>
+                  </div>
+                  <div class="truck__body truck__body--mid">
+                    <div class="truck__mid-body"></div>
+                  </div>
+                  <div class="truck__body truck__body--bottom">
+                    <div class="truck__underpanel"></div>
+                    <div class="truck__rear-bumper"></div>
+                    <div class="truck__side-skirt"></div>
+                  </div>
+                </div>
+                <div class="truck__wheel truck__wheel--front">
+                  <div class="truck__wheel-arch"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+                  <div class="truck-wheel">
+                    <div class="truck-wheel__rim">
+                      <div style="--index: 0;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 1;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 2;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 3;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 4;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 5;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 6;" class="truck-wheel__spoke"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="truck__wheel truck__wheel--rear">
+                  <div class="truck__wheel-arch"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+                  <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+                  <div class="truck-wheel">
+                    <div class="truck-wheel__rim">
+                      <div style="--index: 0;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 1;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 2;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 3;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 4;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 5;" class="truck-wheel__spoke"></div>
+                      <div style="--index: 6;" class="truck-wheel__spoke"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="truck__headlight"></div>
+                <div class="truck__taillight"></div>
+                <div class="truck__indicator"></div>
+                <div class="truck__foglight"></div>
+              </div>            </div>
           </div><!--col end -->
         </div><!--row end -->
 
@@ -227,13 +366,13 @@
     </div>
   </section>
 
-  <section class="vision section">
+  <section class="vision mission section" id="vision">
     <div class="container-fluid">
       <div class="section-content">
         <div class="row">
           
           <div class="col-md-4 col-sm-12">
-            <div class="vision-card">
+            <div class="vision-card" data-aos="flip-left" data-aos-duration="500">
               <span>Our Mission</span>
               <p class="info">
                 To provide the best electric vehicles with the latest
@@ -246,7 +385,7 @@
           </div>  <!--col end -->
           
           <div class="col-md-4 col-sm-12">
-              <div class="vision-card">
+              <div class="vision-card" data-aos="flip-right" data-aos-duration="700">
                 <span>Our Vision</span>
                 <p class="info">To be the first and leading choice in the electric
                   vehicle market, and to actively contribute to the
@@ -256,7 +395,7 @@
           </div>  <!--col end -->
 
         <div class="col-md-4 col-sm-12">
-          <div class="vision-card">
+          <div class="vision-card" data-aos="flip-left" data-aos-duration="900">
             <span>Our Values</span>
             <p class="info">
               <ul>
@@ -287,8 +426,9 @@
   </section>
 
 
-  <section class="services section">
+  <section class="services section" id="services">
     <div class="container-fluid">
+          <h2 class="section-title text-center" data-aos="zoom-in-up">Our Services</h2>
       <div class="section-content">
         <div class="row">
           <div class="col-md-4 col-sm-12">
@@ -384,7 +524,7 @@
           </div>
           
           <div class="col-md-4 col-sm-12">
-            <div class="service-img">
+            <div class="service-img" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="300">
               <img src="assets/img/pump2.png" alt="" srcset="" class="img-fluid w-100">
             </div>
           </div>
@@ -486,7 +626,7 @@
     </div>
   </section>
 
-  <section class="footer section">
+  <section class="footer section" id="contact">
     <div class="container-fluid">
       <div class="section-content">
 
@@ -505,7 +645,7 @@
 
           <div class="col-lg-4 " style="z-index: 1;" data-aos="zoom-in-down" data-aos-duration="1000"
                             data-aos-delay="300">
-           <div class="photo "><img style="max-width: 90%; height: auto; display: flex; margin: auto; z-index: -3 !important;" src="assets/img/alraebsi.png" alt="" srcset=""></div>
+           <div class="photo "><img style="max-width: 60%; height: auto; display: flex; margin: auto; z-index: -3 !important;" src="assets/img/alraebsi.png" alt="" srcset=""></div>
           </div>
 
           <div class="col-lg-4" style="z-index: 100;">
@@ -530,10 +670,10 @@
           <div class="row">
             <div class="col-md-12" style="z-index: 100;">
               <div class="right-copyright" >
-                <p style="color: #cfcfcf;" >
+                <p style="color: #cfcfcf;" data-aos="zoom-out-up" data-aos-delay="600">
                   &copy; Copyright <strong><span>Al Raebi</span></strong>. All Rights Reserved
                 </p>
-                <a id="my_name" style="font-family: 'Almarai', sans-serif; color: #bdbdbd;" target="_blank" href="https://wa.me/+967775519126">
+                <a id="my_name" data-aos="zoom-out-up" data-aos-delay="800" style="font-family: 'Almarai', sans-serif; color: #bdbdbd;" target="_blank" href="https://wa.me/+967775519126">
                   <p >Programmed and Designed by <strong class="text-primary">ALRaebi Team</strong>, please contact us for Development.</p>
               </a>
               </div>
@@ -543,5 +683,55 @@
       </div>
     </div>
   </section>
+
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script>
+  function smoothScrollTo(targetY, duration = 1000) {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    let startTime = null;
+  
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1); // Cap at 1
+  
+      window.scrollTo(0, startY + distance * easeInOutQuad(progress));
+  
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+  
+    function easeInOutQuad(t) {
+      return t < 0.5
+        ? 2 * t * t
+        : -1 + (4 - 2 * t) * t;
+    }
+  
+    requestAnimationFrame(animation);
+  }
+  
+  // Attach to nav buttons
+  document.querySelectorAll('.btn-body').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetClass = this.id;
+      const targetSection = document.querySelector(`.${targetClass}`);
+      if (targetSection) {
+        const targetY = targetSection.offsetTop;
+        smoothScrollTo(targetY, 1000); // 1000ms = 1 second
+      }
+    });
+  });
+  </script>
+  
 </body>
 </html>
