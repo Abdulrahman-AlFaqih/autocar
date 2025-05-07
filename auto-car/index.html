@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlRaebi Auto Car</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- <link rel="stylesheet" href="./assets/css/style-en.css"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+   /* Nav-bar */
+.nav{
+  overflow: hidden;
+}
+
+/*** CSS - APP LAYOUT ***/
+.app-wrapper {
+  top: 10%;
+  left: 4% !important;
+  direction: ltr;
+  
+}
+.app-body {
+  margin-left: 2%;
+}
+
+/*** CSS - APP USE ***/
+.btn-wrapper:not(:first-child) {
+	margin-top: 15px;
+}
+.btn-wrapper {
+	margin-left: 13px;
+}
+
+.btn-body {
+  direction: ltr;
+}
+
+.btn-body::before {
+	left: 0;
+}
+.btn-body p {
+	margin-left: 15px;
+  padding-top: 5px;
+}
+
+/* Mobile Sidebar */
+
+.checkbtn.ar{
+    left: 5% !important;
+}
+
+@media (max-width: 1100px) {
+  
+  .nav{
+    left: -100% !important;
+    overflow-y: scroll;
+  }
+  .btn-wrapper{
+    margin: 10% 0;
+    margin-left: 20px;
+  }
+  .app-wrapper{
+    height: 100%;
+    top: 6%;
+
+  }
+  #check:checked ~.nav{
+    left: 0% !important;
+  }
+  #check{
+    z-index: 1000;
+  }
+
+}
+@media (max-width: 900px) {
+  .btn-wrapper{
+    margin: 10% 0;
+    margin-left: 20px;
+
+  }
+}
+@media (max-width: 500px) {
+  .btn-wrapper{
+    margin: 9% 0;
+    margin-left: 20px;
+
+  }
+}
+
+   /* h1,
+    h3,
+    h4,
+    h5,
+    h6,
+    section p,
+    button,
+    .section {
+        text-align: left;
+    } */
+    section{
+      direction: ltr !important;
+    }
+
+  </style>
+</head>
+<body>
+
+   <!--Navbar -->
+   <input type="checkbox" id="check">
+   <label for="check" class="checkbtn "><i class="fa fa-bars"></i></label>
+   <div class="nav">
+     <div class="app-wrapper">
+       <div class="app-body">
+          <!-- CSS ONLY -->
+          <a href="#" class="btn-wrapper active">
+            <div class="btn-tail"></div>
+            <div class="btn-body">
+              <p class="">Home</p>
+            </div>
+          </a>
+  
+          <a href="#" class="btn-wrapper">
+            <div class="btn-tail"></div>
+            <div class="btn-body" id="about-us">
+              <p>About</p>
+            </div>
+          </a>
+
+          <a href="#" class="btn-wrapper">
+            <div class="btn-tail"></div>
+            <div class="btn-body" id="vision">
+              <p>Vision</p>
+            </div>
+          </a>
+  
+          <a href="#" class="btn-wrapper">
+            <div class="btn-tail"></div>
+            <div class="btn-body" id="services">
+              <p>Mission</p>
+            </div>
+          </a>
+
+          <a href="#" class="btn-wrapper">
+           <div class="btn-tail"></div>
+           <div class="btn-body" id="products">
+             <p>Services</p>
+           </div>
+         </a>
+
+         <a href="#" class="btn-wrapper">
+           <div class="btn-tail"></div>
+           <div class="btn-body" id="second-projects">
+             <p>Projects</p>
+           </div>
+         </a>
+
+         <a href="#" class="btn-wrapper">
+           <div class="btn-tail"></div>
+           <div class="btn-body" id="books">
+             <p>Products</p>
+           </div>
+         </a>
+
+         <a href="#" class="btn-wrapper">
+           <div class="btn-tail"></div>
+           <div class="btn-body" id="faq">
+             <p>Contact-us</p>
+           </div>
+         </a>
+        </div>
+     </div>
+   </div>
+
+
+  <div class="hero section">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="logo">
+        <img src="assets/img/alraebsi.png" alt="Al-Raebi Logo"> <!-- Replace with your logo if needed -->
+      </div>
+      
+      <div class="slider-container">
+        <div class="slides">
+          <div class="slide">
+            <h2>Future is Electric</h2>
+            <p>Experience the next evolution of driving with electric vehicles designed for efficiency and power.</p>
+          </div>
+          <div class="slide">
+            <h2>Clean. Fast. Silent.</h2>
+            <p>Go green without compromise. High-performance, zero-emission transport for the modern era.</p>
+          </div>
+          <div class="slide">
+            <h2>Drive the Change</h2>
+            <p>Join the revolution. Smart, stylish, and sustainable mobility starts with you.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <section class="about section">
+    <div class="container-fluid">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="sci-fi-frame">
+              <h2>Who We Are</h2>
+              <p>
+                AlRaebi Auto Car is a leading company established with the aim of creating
+                a qualitative leap in the automotive sector in the Middle East, by providing
+                integrated solutions in the supply, sale, and maintenance of electric vehicles.
+              </p>       
+            </div>
+          </div>  <!--col end -->
+          <div class="col-md-6 col-sm-12">
+            <div style="max-width: 1000px;overflow: hidden;">
+              <img src="assets/img/ev-car2.png" alt="" class="img-fluid w-100" srcset="" >
+            </div>
+          </div><!--col end -->
+        </div><!--row end -->
+
+      </div>
+    </div>
+  </section>
+
+  <section class="vision section">
+    <div class="container-fluid">
+      <div class="section-content">
+        <div class="row">
+          
+          <div class="col-md-4 col-sm-12">
+            <div class="vision-card">
+              <span>Our Mission</span>
+              <p class="info">
+                To provide the best electric vehicles with the latest
+                global specifications, supported by specialized
+                maintenance services, to meet our customers'
+                aspirations and achieve the highest levels of
+                satisfaction and trust.
+              </p>
+            </div>
+          </div>  <!--col end -->
+          
+          <div class="col-md-4 col-sm-12">
+              <div class="vision-card">
+                <span>Our Vision</span>
+                <p class="info">To be the first and leading choice in the electric
+                  vehicle market, and to actively contribute to the
+                  shift towards green mobility in the region.
+                </p>
+              </div>
+          </div>  <!--col end -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="vision-card">
+            <span>Our Values</span>
+            <p class="info">
+              <ul>
+                <li>
+                  Innovation: Delivering cutting-edge technologies.
+                </li>
+                <li>
+                  Quality: Excellence in performance & service.
+                </li>
+                <li>
+                  Transparency: Honest & clear customer interactions.
+                </li>
+                <li>
+                  Sustainability: Promoting a cleaner environment.
+                </li>
+                <li>
+                  Commitment: Professional & responsible service.
+                </li>
+              </ul>
+            </p>
+          </div>
+      </div>  <!--col end -->
+      
+        </div><!--row end -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="services section">
+    <div class="container-fluid">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <!-- From Uiverse.io by 00Kubi --> 
+            <div class="contain noselect">
+              <div class="canvas">
+                <div class="tracker tr-1"></div>
+                <div class="tracker tr-2"></div>
+                <div class="tracker tr-3"></div>
+                <div class="tracker tr-4"></div>
+                <div class="tracker tr-5"></div>
+                <div class="tracker tr-6"></div>
+                <div class="tracker tr-7"></div>
+                <div class="tracker tr-8"></div>
+                <div class="tracker tr-9"></div>
+                <div id="card">
+                  <div class="card-content">
+                    <div class="card-glare"></div>
+                    <div class="cyber-lines">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <p id="prompt">Electric Vehicle Supply</p>
+                    <div class="title">
+                      We supply the latest models of electric vehicles from major international
+                      companies, catering to all needs for both individuals & businesses.
+                    </div>
+                    <div class="glowing-elements">
+                      <div class="glow-1"></div>
+                      <div class="glow-2"></div>
+                      <div class="glow-3"></div>
+                    </div>
+                    <!-- <div class="subtitle">
+                      <span>INTERACTIVE</span>
+                      <span class="highlight">3D EFFECT</span>
+                    </div> -->
+                    <div class="card-particles">
+                      <span></span><span></span><span></span> <span></span><span></span
+                      ><span></span>
+                    </div>
+                    <div class="corner-elements">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="scan-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contain noselect">
+              <div class="canvas">
+                <div class="tracker tr-1"></div>
+                <div class="tracker tr-2"></div>
+                <div class="tracker tr-3"></div>
+                <div class="tracker tr-4"></div>
+                <div class="tracker tr-5"></div>
+                <div class="tracker tr-6"></div>
+                <div class="tracker tr-7"></div>
+                <div class="tracker tr-8"></div>
+                <div class="tracker tr-9"></div>
+                <div id="card">
+                  <div class="card-content">
+                    <div class="card-glare"></div>
+                    <div class="cyber-lines">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <p id="prompt">Maintenance & After-Sales Services</p>
+                    <div class="title">
+                      Comprehensive periodic maintenance for electric vehicles,
+                      Battery & charging system repairs. <br>
+                      Technical support and specialized consultations.
+                    </div>
+                    <div class="glowing-elements">
+                      <div class="glow-1"></div>
+                      <div class="glow-2"></div>
+                      <div class="glow-3"></div>
+                    </div>
+                    <!-- <div class="subtitle">
+                      <span>INTERACTIVE</span>
+                      <span class="highlight">3D EFFECT</span>
+                    </div> -->
+                    <div class="card-particles">
+                      <span></span><span></span><span></span> <span></span><span></span
+                      ><span></span>
+                    </div>
+                    <div class="corner-elements">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="scan-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-12">
+            <div class="service-img">
+              <img src="assets/img/pump2.png" alt="" srcset="" class="img-fluid w-100">
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12">
+            <!-- From Uiverse.io by 00Kubi --> 
+            <div class="contain noselect">
+              <div class="canvas">
+                <div class="tracker tr-1"></div>
+                <div class="tracker tr-2"></div>
+                <div class="tracker tr-3"></div>
+                <div class="tracker tr-4"></div>
+                <div class="tracker tr-5"></div>
+                <div class="tracker tr-6"></div>
+                <div class="tracker tr-7"></div>
+                <div class="tracker tr-8"></div>
+                <div class="tracker tr-9"></div>
+                <div id="card">
+                  <div class="card-content">
+                    <div class="card-glare"></div>
+                    <div class="cyber-lines">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <p id="prompt">Charging Systems</p>
+                    <div class="title">
+                      Supply & installation of home & office charging devices
+                      Integrated solutions for public & private charging stations
+                    </div>
+                    <div class="glowing-elements">
+                      <div class="glow-1"></div>
+                      <div class="glow-2"></div>
+                      <div class="glow-3"></div>
+                    </div>
+                    <!-- <div class="subtitle">
+                      <span>INTERACTIVE</span>
+                      <span class="highlight">3D EFFECT</span>
+                    </div> -->
+                    <div class="card-particles">
+                      <span></span><span></span><span></span> <span></span><span></span
+                      ><span></span>
+                    </div>
+                    <div class="corner-elements">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="scan-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contain noselect">
+              <div class="canvas">
+                <div class="tracker tr-1"></div>
+                <div class="tracker tr-2"></div>
+                <div class="tracker tr-3"></div>
+                <div class="tracker tr-4"></div>
+                <div class="tracker tr-5"></div>
+                <div class="tracker tr-6"></div>
+                <div class="tracker tr-7"></div>
+                <div class="tracker tr-8"></div>
+                <div class="tracker tr-9"></div>
+                <div id="card">
+                  <div class="card-content">
+                    <div class="card-glare"></div>
+                    <div class="cyber-lines">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <p id="prompt">Fleet Consulting & Conversion</p>
+                    <div class="title">
+                      We offer consulting services to help companies &
+                      organizations transition their fleets to electric vehicles, enhancing operational efficiency.
+                    </div>
+                    <div class="glowing-elements">
+                      <div class="glow-1"></div>
+                      <div class="glow-2"></div>
+                      <div class="glow-3"></div>
+                    </div>
+                    <!-- <div class="subtitle">
+                      <span>INTERACTIVE</span>
+                      <span class="highlight">3D EFFECT</span>
+                    </div> -->
+                    <div class="card-particles">
+                      <span></span><span></span><span></span> <span></span><span></span
+                      ><span></span>
+                    </div>
+                    <div class="corner-elements">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="scan-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div><!--row end -->
+
+      </div>
+    </div>
+  </section>
+
+  <section class="footer section">
+    <div class="container-fluid">
+      <div class="section-content">
+
+        <div class="row" style="z-index: 100 ;">
+          <div class="col-lg-4" style="z-index: 100;">
+            <div class="footer-contact">
+              <strong class="h1 py-2" data-aos="zoom-out-up" data-aos-delay="100">Contact us</strong>
+              <div class="contact-links my-4">
+                <a target="_blank" data-aos="zoom-out-up" data-aos-delay="200" href="https://www.google.com/maps/dir//C5QH%2B96M,+Dahban,+%D8%A7%D9%84%D9%8A%D9%85%D9%86%E2%80%AD/@15.4386943,44.2073925,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1603d98b16e595af:0x9e72247b7a3b6fb!2m2!1d44.1780652!2d15.4384773?entry=ttu"><span class="mx-2">Sana'a - Jader - beside Al-Hilal Hospital</span><i class="fa fa-location-dot Location"></i></a>
+                <a href="#" data-aos="zoom-out-up" data-aos-delay="300" class="my-3"><span class="mx-2">Wholesale/ 00967-775557770</span><i class="fa fa-phone phone"></i></a>
+                <a href="#" data-aos="zoom-out-up" data-aos-delay="400" class="my-3"><span class="mx-2">Retail/ 00967-777444702</span><i class="fa fa-phone phone"></i></a>
+                <a target="_blank" data-aos="zoom-out-up" data-aos-delay="500" href="mailto:info@alraebi.com"><span style="letter-spacing: 1px;" class="mx-2">Alraebi@info.com</span><i class="fa fa-envelope envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 " style="z-index: 1;" data-aos="zoom-in-down" data-aos-duration="1000"
+                            data-aos-delay="300">
+           <div class="photo "><img style="max-width: 90%; height: auto; display: flex; margin: auto; z-index: -3 !important;" src="assets/img/alraebsi.png" alt="" srcset=""></div>
+          </div>
+
+          <div class="col-lg-4" style="z-index: 100;">
+            <div class="footer-details">
+              <a class="logo" href="#" data-aos="zoom-out-up" data-aos-delay="100">Al-Raebi Company</a>
+              <p class="my-2 h4 fs-5" data-aos="zoom-out-up" data-aos-delay="200">Energy For Life</p>
+              <div class="footer-social mt-4" data-aos="zoom-out-up" data-aos-delay="300">
+                <a href="#">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row end -->
+
+          <div class="row">
+            <div class="col-md-12" style="z-index: 100;">
+              <div class="right-copyright" >
+                <p style="color: #cfcfcf;" >
+                  &copy; Copyright <strong><span>Al Raebi</span></strong>. All Rights Reserved
+                </p>
+                <a id="my_name" style="font-family: 'Almarai', sans-serif; color: #bdbdbd;" target="_blank" href="https://wa.me/+967775519126">
+                  <p >Programmed and Designed by <strong class="text-primary">ALRaebi Team</strong>, please contact us for Development.</p>
+              </a>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
